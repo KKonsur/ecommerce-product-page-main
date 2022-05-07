@@ -1,0 +1,104 @@
+.lightBox {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   justify-content: center;
+   display: none;
+   background-color: rgba(0, 0, 0, 0.7);
+
+   &__content {
+      width: 30vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__mainImageContainer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__closeButton {
+      align-self: flex-end;
+      padding: 0.5rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      margin-bottom: 1rem;
+
+      svg {
+         transform: scale(2);
+         fill: $dark-grayish-blue;
+
+         &:hover {
+            fill: $orange;
+         }
+      }
+   }
+
+   .previousButton,
+   .nextButton {
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      top: calc(50% - 0.5rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover svg {
+         stroke: $orange;
+      }
+
+      svg {
+         stroke: $very-dark-blue;
+      }
+   }
+
+   .previousButton {
+      left: -1.5rem;
+   }
+
+   .nextButton {
+      right: -1.5rem;
+   }
+
+   &__mainImage {
+      width: 100%;
+      border-radius: 30px;
+   }
+
+   &__thumbnailImages {
+      width: 100%;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__thumbnailImage {
+      width: 20%;
+      border-radius: 15px;
+      position: relative;
+      display: block;
+
+      &:hover {
+         border: 2px solid $orange;
+         filter: opacity(70%);
+         cursor: pointer;
+      }
+   }
+
+   &--active {
+      display: flex;
+   }
+}

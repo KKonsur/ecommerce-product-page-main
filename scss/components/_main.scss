@@ -1,0 +1,15 @@
+.main {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 6vh;
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+
+   @media (max-width: $mobile-size) {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 0;
+   }
+}

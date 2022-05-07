@@ -1,0 +1,13 @@
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 12vh;
+   width: 95%;
+   margin: auto;
+   border-bottom: 1px solid $grayish-blue;
+
+   @media (max-width: $mobile-size) {
+      border: none;
+   }
+}

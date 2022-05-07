@@ -1,0 +1,92 @@
+.imagesSection {
+   width: clamp(300px, 40vw, 50%);
+   min-height: 60vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-self: flex-start;
+
+   @media (max-width: $mobile-size) {
+      position: relative;
+      width: 100%;
+      min-height: 0;
+   }
+
+   &__image {
+      display: flex;
+      justify-content: center;
+   }
+
+   .mainImage {
+      width: 65%;
+      border-radius: 30px;
+      cursor: pointer;
+
+      @media (max-width: $mobile-size) {
+         width: 100%;
+         border-radius: 0;
+      }
+   }
+
+   &__thumbnailsImages {
+      width: 65%;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: $mobile-size) {
+         display: none;
+      }
+   }
+
+   &__thumbnailImage {
+      width: 20%;
+      border-radius: 15px;
+      position: relative;
+      display: block;
+
+      &:hover {
+         border: 2px solid $orange;
+         filter: opacity(70%);
+         cursor: pointer;
+      }
+   }
+
+   .previousButton--mobile,
+   .nextButton--mobile {
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      top: calc(50% - 0.5rem);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @media (max-width: $mobile-size) {
+         display: flex;
+      }
+
+      &:hover svg {
+         stroke: $orange;
+      }
+
+      svg {
+         stroke: $very-dark-blue;
+      }
+   }
+
+   .previousButton--mobile {
+      left: 1rem;
+   }
+
+   .nextButton--mobile {
+      right: 1rem;
+   }
+}
